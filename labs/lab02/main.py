@@ -23,7 +23,7 @@ print("* " * 40)
 print()
 name= input("Name: ")
 print()
-print (f"Hello,{name}! Welcome to THE DISNEY MOVIES QUIZZ!")
+print (f"Hello, {name}! Welcome to THE DISNEY MOVIES QUIZZ!")
 print()
 
 # START 
@@ -90,7 +90,7 @@ if start_quiz== "Yes" or start_quiz== "yes"  or start_quiz== "YES":
         if q3 == "Jasmine" or q3 == "jasmine":
             counter += 1
             print()
-            print(GREEN + "That is correct! Jasmine is the first P.O.C. princess. Aladdin made its dabute in 1992!🧞‍♂️ 🕌 🐯 "+ MAGENTA)
+            print(GREEN + "That is correct! Jasmine is the first P.O.C. princess. Aladdin made its dabute in 1992! 🕌 🧞‍♂️ 👸 🐯 "+ MAGENTA)
         else:
             print()
             print(RED + "sorry that is incorrect "+MAGENTA)
@@ -106,6 +106,7 @@ if start_quiz== "Yes" or start_quiz== "yes"  or start_quiz== "YES":
         print ("    B - Mickey's House of Mouse: A Valentine's Day Mix-Up 💐❤️🍫")
         print ("    C - Mickey's House of Mouse: The Grand Reopening Gala🥂🎉🥳")
         print ("    D - Mickey's Magical Christmas: Snowed in at the House of Mouse 👻🎃🕸️🕷️"+MAGENTA)
+        print()
 
         q4= input("   Answer: ")
         if q4 == "A and D" or q4 == "D and A"or q4 == "a and D" or q4 == "D and a" or q4 == "A and d" or q4 == "d and A" or q4 == "a and d" or q4 == "d and a": 
@@ -171,6 +172,6 @@ else:
 print()
 print("* " * 40)
 print()
-print(CYAN +"                      ✨ THE END✨"+ MAGENTA)
+print(CYAN +"                      ✨ THE END ✨"+ MAGENTA)
 print()
 print("* " * 40)
