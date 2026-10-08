@@ -172,6 +172,6 @@ else:
 print()
 print("* " * 40)
 print()
-print(CYAN +"                      ✨ THE END ✨"+ MAGENTA)
+print(CYAN +"                                ✨ THE END ✨"+ MAGENTA)
 print()
 print("* " * 40)
