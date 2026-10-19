@@ -4,6 +4,7 @@
 # October 19, 2026
 
 # display a welcome message
+print()
 print("The Miles Per Gallon program")
 print()
 
