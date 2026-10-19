@@ -1,6 +1,6 @@
 
 
-#CS 31 Lab Activity 3.2, 
+#CS 31 Lab Activity 3.2 
 # Michelle Najera
 # October 19, 2026
 
