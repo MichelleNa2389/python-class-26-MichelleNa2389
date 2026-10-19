@@ -32,7 +32,7 @@ while repeat_mpg.lower() == "y":
         print("Cost per mile:             ", cost_per_mile)
 
     print()
-    repeat_mpg = input("Do you want to calculate another MPG? (y/n): ")  
+    repeat_mpg = input("Would you like to enter data for another trip (y/n): ")  
 
 print()
 print("Bye!")
