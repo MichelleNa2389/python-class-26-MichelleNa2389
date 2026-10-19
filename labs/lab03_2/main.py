@@ -5,6 +5,7 @@
 # October 19, 2026
 
 # display a welcome message
+
 print("The Test Scores application")
 print()
 print("Enter test scores")
