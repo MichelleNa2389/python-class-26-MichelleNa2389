@@ -1,94 +1,164 @@
-# Starting file for PROJECT 1
-# Include your course number, student first and last name, and date in the comment header
 
+# CS 31 Project 1 
+# Michelle Najera
+# October 23, 2026
+
+usa_cost = float(4976.00)
+euro_cost =float(3400.00)
+tropics_cost =float(2600.00)
+asia_cost =float(3148.00)
+sales_tax = 0.10
+
+BLUE = "\033[34m"
+RESET = "\033[0m"
+chatbox = f"{BLUE}Dreamer:{RESET}"
 
 #Greet the customer and introduce your sales program.
-
-print("Hello Dreamer! Welcome to Dreamscape Travels! Where We Turn Dreams into Destinations.”")
-
-startsale = input("Would you like to learn more about our travel packages? (yes/no): ")
-print()
-
-if startsale.lower() == "yes":
-    print("Our Dreamscape packages include a variety of destinations across the United States, Europe, Asia, and the tropics.")
-    print("We have standerized travel plans with realiable companies to ensure a smooth and enjoyable experience.")
-    print("But if you have specific preferences or unique travel needs, we are happy to customize your itinerary to make your dream vacation truly unforgettable.")
+def greet_user():
     print()
-    print("Would you like to book one of our exclusive travel packages today?")
-    book = input("Please enter 'yes' or 'no': ")
+    print("* " * 50)
+    print(chatbox, "Hello! Welcome to Dreamscape Travels! Where We Turn Dreams into Destinations.”")
+
+    print(f"""
+{chatbox} Dreamscape offers travel packages across the United States, Europe, Asia, and the tropics. 
+         Our trusted partners help ensure a smooth, enjoyable trip. We also customize itineraries 
+         to fit your preferences and create your dream vacation.""")
     print()
-    if book.lower() == "yes":
-        print("Fantastic! Let's get started with your booking.")
-        print ()
-        print("United States Package")
-        print("New York City · 4 days, 3 nights")
-        print("Package includes: Hotel accommodation, selected sightseeing tours, and itinerary assistance.")
-        print("day 1: Arrival and hotel check-in. Visit Times Square")
-        print("day 2: Visit Central Park, The statue of Liberty, and enjoy a Broadway shows.")
-        print("day 3: Free day for personal exploration.")
-        print("day 4: Departure.")
-    
-        print("Europe Package") 
-        print("")  
-        print("day 1: Arrival and hotel check-in. Explore local attractions.")
-        print("day 2: Sightseeing tours and cultural experiences.")
-        print("day 3: Free day for personal exploration.")
-        print("day 4: Departure.")
-        print("Package includes: Hotel accommodation, selected sightseeing tours, and itinerary assistance.")
+
+def booking():
+    print (chatbox, "Would you like to book one of our exclusive travel packages today?")
+    booking_response =  input("Please enter 'yes' or 'no': ")
+
+    if booking_response.lower() == "yes":
         print()
+        print(chatbox,"Fantastic! Let's get started with your booking.")
+        print("* " * 40)
+        print("""
+        Each package includes:
+            - Airport transfers
+            - Travel insurance
+            - Guided tours and activities
+            - Food Recommendations
+
+            
+        United States Package - New York"
+            Day 1: Arrival, Check-in, Times Square
+            Day 2: Central Park & Museums
+            Day 3: Downtown & Statue of Liberty
+            Day 4: Grand Central, Hudson Yards & Broadway
+            Day 5: Free day for exploration
+            Day 6: Free day for exporation
+            Day 7: Check-out and Departure
+            
+        Europe Package - England and France
+            Day 1: Arrival to England, Check-in, London sightseeing
+            Day 2: Visting royal palaces and historic sites in London
+            Day 3: Museums and cultural experiences in London
+            Day 4: Arrival to France, Check-in, Paris sightseeing
+            Day 5: Museums, Palaces, and Cafes
+            Day 6: Free day for exploration in France
+            Day 7: Departure
+
+        Asia Package- Japan 
+            Day 1: Arrival, Check-in, Shibuya & Shinjuku (Skyline views and neon streets)
+            Day 2: Traditional Tokyo sightseeing (temples, gardens, and historic districts)
+            Day 3: Anime, gaming & futuristic Tokyo (Akihabara, Odaiba, and themed cafes)
+            Day 4: Mount Fuji day trip
+            Day 5: free day for exploration
+            Day 6: Spa And Wellness Day
+            Day 7: Departure
+
+        Tropics Package- Bahamas
+            Day 1: Arrival and city tour
+            Day 2: Swimming pigs in Exuma
+            Day 3: Nassau culture and local food
+            Day 4: Rose Island boat excursion
+            Day 5: Snorkeling or scuba diving
+            Day 6: Resort day + Cable Beach
+            Day 7: Departure
+            """)
+        print("* " * 40)
+        print("")
+        #sales math 
         
-        print("Asia Packages")
-        print("Package includes: Hotel accommodation, selected sightseeing tours, and itinerary assistance.")
-        print("day 1: Arrival and hotel check-in. Explore local attractions.")
-        print("day 2: Sightseeing tours and cultural experiences.")
-        print("day 3: Free day for personal exploration.")
-        print("day 4: Departure.")
-
-        print("Tropical Packages")
-        print(" day 1: Arrival and hotel check-in. Relax on the beach.")
-        print("day 2: Enjoy water sports and local excursions.")
-        print("day 3: Free day for personal exploration.")
-        print("day 4: Departure.")
-        print("Package includes: Hotel accommodation, selected sightseeing tours, and itinerary assistance.")
-        print()
-
-    elif book.lower() == "no":
-        print("No problem! Feel free to explore our packages anytime.")
+    elif booking_response.lower() == "no":
+        print(chatbox,"No problem! Feel free to explore our packages anytime.")
     else:
         print("Please enter 'yes' or 'no'.")
 
-elif startsale.lower() == "no":
-print()
-    print("No worries! Have a wonderful day and safe travels!")
-else:
+def sales():
+    print(chatbox,"Before you choose your package, let's gather some details.")
     print()
-    print("Please enter 'yes' or 'no'.")
+    name= input("Enter your name: ")
+    print()
+    email= input("Enter your email: ")
+    print()
+    phone= input("Enter your phone number: ")
+    print()
+    package_choice = input(f"{chatbox}Which package would you like to book? (USA, Euro, Asia, Tropics): ")
+    print()
+    quantity = int(input(f"{chatbox}How many packages would you like to book? "))
 
-#elsif 
-#Ask if the user would like to learn more about your product or service.
-#If yes, provide a short overview of the product or service.
-#If no, end the conversation politely with a farewell message.
+    if package_choice.lower() == "usa":
+        package_cost = usa_cost*quantity
+        print()
+        print(f"{chatbox}Package cost for {quantity} USA package(s): ${package_cost:.2f}")
 
-#If the customer continues:
-#Provide a creative paragraph overview of your product or service.
-#Make it engaging — serious or silly, your choice!
-#Format long text nicely across multiple lines for readability.
-#Ask if the user would like to make a purchase.
-#If yes, continue with the sale.
-#If no, display a farewell and end the program.
+    elif package_choice.lower() == "euro":
+        package_cost = euro_cost*quantity
+        print()
+        print(f"{chatbox}Package cost for {quantity} Euro package(s): ${package_cost:.2f}")
 
-#Closing the sale:
-#Ask for the customer’s first and last name and store them in variables.
-#Ask for their email address and phone number (no validation needed at this point).
-#Tell the customer how much the product or service costs.
-#Ask how many items they want to purchase.
-#Calculate and display the subtotal (quantity × price).
-#Apply a 10% sales tax.
-#Calculate and display the total amount due.
+    elif package_choice.lower() == "asia":
+        package_cost = asia_cost*quantity
+        print()
+        print(f"{chatbox}Package cost for {quantity} Asia package(s): ${package_cost:.2f}")
 
-#Create a formatted receipt showing:
-#Customer name, email, and phone number
-#Quantity purchased and cost per item
-#Subtotal, tax, and total amount due
-#Nicely formatted output using line breaks and symbols
-#End with a thank-you message and farewell.
+    elif package_choice.lower() == "tropics":
+        package_cost = tropics_cost*quantity
+        print()
+        print(f"{chatbox}Package cost for {quantity} Tropics package(s): ${package_cost:.2f}")
+    else:
+        print("Invalid package choice.")
+        package_cost = 0
+        #sales math 
+    receipt(name, email, phone, package_choice, quantity, package_cost)
+
+
+def receipt(name, email, phone, package_choice, quantity, package_cost):
+
+    print("= " * 23)
+    print("------------------ Receipt ------------------")
+    print("= " * 23)
+    print()
+    print(f"                Name: {name}")
+    print(f"               Email: {email}")
+    print(f"               Phone: {phone}")
+    print()
+    print("-" * 43)
+    print()
+    print(f"             Package: {package_choice} ")
+    print(f"            Quantity: {quantity}")
+    subtotal = package_cost
+    tax = subtotal * sales_tax
+    total = subtotal + tax
+    print("-" *43)
+    print(f"            Subtotal: ${subtotal:.2f}")
+    print(f"                 Tax: ${tax:.2f}")
+    print("=" *43)
+    print(f"               Total: ${total:.2f}")
+    print("= " * 23)
+    print()
+    print("          Thank you for your purchase!")
+    print()
+    print("= " * 23)
+   
+
+def main():
+    greet_user()
+    booking()
+    sales()
+    receipt()
+    
+if __name__ == "__main__":
+    main()
